@@ -19,5 +19,7 @@ public interface Deque<T>{
     //retrieves value from end
     public T offerLast ();
 
+    public boolean isEmpty();
+
 
 }
