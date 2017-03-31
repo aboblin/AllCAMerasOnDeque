@@ -1,5 +1,12 @@
-public class ALDeque<T> implements Deque<T>{
+public class DLLDeque<T> implements Deque<T>{
     
+    private DLLNode<T> _first, _last;
+    public int _size;
+
+    public DLLDeque() {
+	_first = _last = null;
+	_size = 0;
+    }
 
     public void addFirst (T val) {
 
@@ -39,6 +46,20 @@ public class ALDeque<T> implements Deque<T>{
 	//implementation here
 	return null;
 
+    }
+
+    public boolean isEmpty() {
+	return true;
+    }
+
+    public String toString() { 
+	String foo = "";
+	LLNode<T> tmp = _front;
+	while ( tmp != null ) {
+	    foo += tmp.getValue() + " ";
+	    tmp = tmp.getNext();
+	}
+	return foo;
     }
 
 }//end
