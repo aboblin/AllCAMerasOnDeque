@@ -110,4 +110,43 @@ public class DLLDeque<T> implements Deque<T>{
     }//O(n)
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+    public static void main( String[] args ) 
+    {
+        Deque<String> PirateDeque = new DLLDeque<String>();
+
+	System.out.println("\nnow enqueuing..."); 
+	PirateDeque.addFirst("Dread");
+	PirateDeque.addFirst("Pirate");
+	PirateDeque.addFirst("Robert");
+	PirateDeque.addFirst("Blackbeard");
+	PirateDeque.addFirst("Peter");
+	PirateDeque.addFirst("Stuyvesant");
+	PirateDeque.addLast("Dread");
+	PirateDeque.addLast("Pirate");
+	PirateDeque.addLast("Robert");
+	PirateDeque.addLast("Blackbeard");
+	PirateDeque.addLast("Peter");
+	PirateDeque.addLast("Stuyvesant");
+
+	System.out.println("\nnow testing toString()..."); 
+	System.out.println( PirateDeque ); //for testing toString()...
+
+	System.out.println("\nnow dequeuing..."); 
+	System.out.println( PirateDeque.removeLast() );
+	System.out.println( PirateDeque.removeLast() );
+	System.out.println( PirateDeque.removeLast() );
+	System.out.println( PirateDeque.removeLast() );
+	System.out.println( PirateDeque.removeLast() );
+	System.out.println( PirateDeque.removeLast() );
+	System.out.println( PirateDeque.removeFirst() );
+	System.out.println( PirateDeque.removeFirst() );
+	System.out.println( PirateDeque.removeFirst() );
+	System.out.println( PirateDeque.removeFirst() );
+	System.out.println( PirateDeque.removeFirst() );
+	System.out.println( PirateDeque.removeFirst() );
+
+	System.out.println("\nnow dequeuing fr empty queue..."); 
+	System.out.println( PirateDeque.removeFirst() );
+	System.out.println( PirateDeque.removeLast() );
+    }
 }//end
