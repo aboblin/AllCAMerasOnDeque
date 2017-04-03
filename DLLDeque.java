@@ -16,20 +16,20 @@ public class DLLDeque<T> implements Deque<T>{
     public void addFirst (T val) {
 
 	if (isEmpty()) {
-	    _first.setCargo(val);
+	    _first = new DLLNode<T>(val, null, null);
 	    _last = _first;
 	    _size++;
 	    return;
 	}
 	_first.setPrev(new DLLNode<T>(val, null, _first));
-	_first = getPrev();
+	_first = _first.getPrev();
 	_size++;
 	return;
     }
 
     public void addLast(T val) {
 	if (isEmpty()) {
-	    _last.setCargo(val);
+	    _last = new DLLNode<T>(val, null, null);
 	    _first = _last;
 	    _size++;
 	    return;
@@ -63,7 +63,7 @@ public class DLLDeque<T> implements Deque<T>{
 }
 
     public T offerLast() {
-	return _last.getCargo()
+	return _last.getCargo();
     }
 
     public boolean isEmpty() {
@@ -72,9 +72,9 @@ public class DLLDeque<T> implements Deque<T>{
 
     public String toString() { 
 	String foo = "";
-	LLNode<T> tmp = _front;
+	DLLNode<T> tmp = _first;
 	while ( tmp != null ) {
-	    foo += tmp.getValue() + " ";
+	    foo += tmp + " ";
 	    tmp = tmp.getNext();
 	}
 	return foo;
