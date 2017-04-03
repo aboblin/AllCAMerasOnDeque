@@ -1,6 +1,6 @@
 # AllCAMerasOnDeque
 
-Carol Pan, Adrian Boylan, Mark Shafran
+## Carol Pan, Adrian Boylan, Mark Shafran
 
 Method Selection Choices:
 
