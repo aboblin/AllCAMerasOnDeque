@@ -13,4 +13,4 @@ Method Selection Choices:
 7. boolen isEmpty(); //Returns true if the Deque is empty  (AKA \_size == 0); false otherwise
 8. String toString(); //Returns the string representation of the Deque
 
-We chose a doubly-linked node-based architecture because we found that all the methods we chose to implement other than the toString() method would have a constant runtime, O(1).
+We chose a doubly-linked node-based architecture because we found that almost all of the methods we chose to implement have a  constant runtime, or O(1). The only exception is toString(), which would has a linear, or O(n), runtime.
