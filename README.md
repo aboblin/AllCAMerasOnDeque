@@ -2,6 +2,10 @@
 
 ## Carol Pan, Adrian Boylan, Mark Shafran
 
+Deque Explanation:
+
+A Deque is a linear collection that allows for insertion on both the front and the back ends. Deque is actually short for "double ended queue," and much like a queue it has method for adding, removing, and offering but instead of methods solely focusing on the front of the collection, it also accesses the end of the collection.
+
 Method Selection Choices:
 
 1. void addFirst ( T val ); //Adds value to the front of the Deque
