@@ -45,16 +45,16 @@ public class DLLDeque<T> implements Deque<T>{
 	    {throw new IndexOutOfBoundsException("There is no element to remove");}
 	T temp = _first.getCargo();
 	_first = _first.getNext();
-	_size++;
+	_size--;
 	return temp;
     }
 
     public T removeLast() {
         if (isEmpty())
 	    {throw new IndexOutOfBoundsException("There is no element to remove");}
-	T temp = _first.getCargo();
-	_first = _first.getNext();
-	_size++;
+	T temp = _last.getCargo();
+	_last = _last.getPrev();
+	_size--;
 	return temp;
     }
 
