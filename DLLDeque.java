@@ -80,12 +80,18 @@ public class DLLDeque<T> implements Deque<T>{
     }//O(1)
 
     //returns the first value in the deque
-    public T offerFirst() {
+    public T peekFirst() {
+	if (_size == 0){
+	    return null;
+	}
         return _first.getCargo();
     }//O(1)
 
     //returns the last value in the deque
-    public T offerLast() {
+    public T peekLast() {
+	if (_size == 0){
+	    return null;
+	}
 	return _last.getCargo();
     }
 

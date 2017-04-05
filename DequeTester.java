@@ -42,7 +42,7 @@ public class DequeTester {
 	// should print exception if exceptions are handled
 	try {
 	    //method name should be peekFirst()
-	    stringDeque.offerFirst(); //doesn't return null message
+	    stringDeque.peekFirst(); //doesn't return null message
 	} catch (Exception e) {
 	    e.printStackTrace(); //prints error message
 	}
@@ -52,7 +52,7 @@ public class DequeTester {
 	stringDeque.addFirst( "a" );
 	System.out.println( "\nGetting first element..." );
 	// a should be printed
-	System.out.println( stringDeque.offerFirst() + "\n" ); // a
+	System.out.println( stringDeque.peekFirst() + "\n" ); // a
 
 
 	// Test using deque of Objects

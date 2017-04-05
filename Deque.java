@@ -14,10 +14,10 @@ public interface Deque<T>{
     public T removeLast ();
 
     //retrieves value at front
-    public T offerFirst ();
+    public T peekFirst ();
 
     //retrieves value from end
-    public T offerLast ();
+    public T peekLast ();
 
     public boolean isEmpty();
 
