@@ -101,8 +101,11 @@ public class DLLDeque<T> implements Deque<T>{
     }//O(1)
 
     //standard toString method
-    public String toString() { 
+    public String toString() {
 	String foo = "";
+	if (isEmpty()){
+	    return foo;
+	}
 	DLLNode<T> tmp = _first;
 	while ( tmp != null ) {
 	    foo += tmp + " ";
